@@ -1,0 +1,28 @@
+{%extends 'portfolio/base.html'%}
+{%load static%}
+{%block title%}Портфолио{%endblock title%}
+{% block content %}
+
+<p><img class = 'we' src = "{%static 'images/my_face.jpg'%}"></p>
+<div class="row justify-content-center mb-3">
+  <div class="col-md-9 text-center">
+    <h1 id="hometext" class="font-weight-bold">Роман Тюрин - программист почти из Казани 😊</h1>
+  </div>
+</div>
+<div class="row">
+    {%for field in objs%}
+    <div class="col-lg-4 col-md-6">
+    <h1>{{field.title}}</h1>
+    <p>{{field.description}}</p>
+    {% if project.url %}
+    <a href="{{ field.url }}">
+      <img src="{{ field.image.url }}" class="img-fluid mb-2">
+    </a>
+    {% else %}
+
+    <img src="{{ field.image.url }}" class="img-fluid mb-2">
+    {% endif %}
+    </div>
+    {%endfor%}
+</div>
+{% endblock content %}

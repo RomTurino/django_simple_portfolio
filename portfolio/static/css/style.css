@@ -1,0 +1,49 @@
+ html,body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        width:auto
+      }
+body {
+overflow: auto; /* добавить полосу прокрутки */
+      }
+.we{
+    width:40%;
+    margin-top: 40px;
+    margin-left: 30%;
+    margin-right:30%
+}
+.navbar-nav .nav-link {
+    color: rgba(0,0,0,1) !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: rgba(0,0,0,.5) !important;
+}
+
+body {
+    font-family: 'Caveat', cursive;
+    font-size:18px
+}
+
+#blogtitle {
+    font-size: 6rem;
+}
+
+@media (min-width: 992px) {
+    #hometext {
+        font-size: 4rem;
+    }
+    #blogdetailtitle {
+        font-size: 5rem;
+    }
+}
+.flex{
+    display:flex;
+    flex-direction:row
+}
+.flex img{
+    width:40%;
+    height:40%
+}
